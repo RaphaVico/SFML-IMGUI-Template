@@ -1,6 +1,6 @@
 # SFML-IMGUI-Template C++
 
-Projeto em C++ que utiliza as bibliotecas **SFML**, **Dear ImGui** e **ImGui-SFML**, gerenciado via **CMake** com `FetchContent` para gerenciamento automático de dependências.
+Projeto em C++ que utiliza as bibliotecas **SFML**, **Dear ImGui** e **ImGui-SFML**, gerenciado via **CMake** com `FetchContent` para gerenciamento automático de dependências. Feito para Windows, não testado em outras sistemas operacionais!
 
 ## 📦 Dependências
 
@@ -40,25 +40,35 @@ cmake --build .
 cmake .. -A x64 -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 ```
 
-Essa flag define que a compilação será feita para sistemas de 64 bits. Em outros sistemas, como Linux ou macOS, essa flag normalmente **não é necessária**.
+Essa flag define que a compilação será feita para sistemas de 64 bits.
+Para criar o executável, dentro da pasta `build`, execute o comando:
+
+```bash
+cmake --build .
+```
+
+Isso irá compilar o projeto com base na configuração gerada pelo CMake.
 
 
 ## ▶️ Como executar
 
-Após a compilação, o executável estará disponível dentro da pasta `build`. Para executá-lo:
+Após a compilação, o executável estará disponível dentro da pasta `build/Debug`. Para executá-lo:
 
 ```bash
-./main
+./main.exe
 ```
 
 ## 📁 Estrutura do Projeto
 
 ```
 SFML-IMGUI-Template/
-│
+├── build/
+├── include/
+├── lib/
 ├── src/
 │   └── main.cpp
 ├── CMakeLists.txt
+├── Makefile
 └── README.md
 ```
 
