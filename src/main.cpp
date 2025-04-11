@@ -14,13 +14,6 @@ void options(float* fps) {
 }
 
 int main() {
-    sf::Shader shader;
-    if (!shader.loadFromFile("D:/Documentos/C++/Fractal/src/mandelbrot.frag", sf::Shader::Type::Fragment))
-    {
-        std::cerr << "Erro ao carregar o shader\n";
-        return -1;
-    }
-
     sf::RenderWindow window(sf::VideoMode({1920, 1080}), "ImGui + SFML = <3");
     window.setFramerateLimit(60);
     sf::Clock clock;
