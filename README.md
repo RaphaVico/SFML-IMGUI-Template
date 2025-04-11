@@ -1,31 +1,31 @@
 # SFML-IMGUI-Template C++
 
-Projeto em C++ que utiliza as bibliotecas **SFML**, **Dear ImGui** e **ImGui-SFML**, gerenciado via **CMake** com `FetchContent` para gerenciamento automático de dependências. Feito para Windows, não testado em outras sistemas operacionais!
+A C++ project using **SFML**, **Dear ImGui**, and **ImGui-SFML**, managed with **CMake** using `FetchContent` for automatic dependency handling. Developed for Windows — **not tested on other operating systems**!
 
-## 📦 Dependências
+## 📦 Dependencies
 
-Este projeto faz uso de:
+This project uses the following libraries:
 
-- [SFML 3.0.0](https://github.com/SFML/SFML) – Interface multimídia simples para gráficos, janelas e sistema.
-- [Dear ImGui 1.91.9b](https://github.com/ocornut/imgui) – Biblioteca de GUI para C++ com foco em ferramentas e debug.
-- [ImGui-SFML v3.0](https://github.com/SFML/imgui-sfml) – Wrapper para integrar ImGui com SFML.
+- [SFML 3.0.0](https://github.com/SFML/SFML) – A simple multimedia library for graphics, window management, and system functionality.
+- [Dear ImGui 1.91.9b](https://github.com/ocornut/imgui) – A GUI library for C++ focused on tools and debugging interfaces.
+- [ImGui-SFML v3.0](https://github.com/SFML/imgui-sfml) – A wrapper that integrates Dear ImGui with SFML.
 
-## 🔧 Pré-requisitos
+## 🔧 Requirements
 
 - CMake >= 3.14
-- Compilador C++17 ou superior
+- C++17 or higher compatible compiler
 - Git
 
-## 🛠️ Como compilar
+## 🛠️ How to Build
 
-Clone este repositório:
+Clone this repository:
 
 ```bash
-git https://github.com/RaphaVico/SFML-IMGUI-Template.git
+git clone https://github.com/RaphaVico/SFML-IMGUI-Template.git
 cd SFML-IMGUI-Template
 ```
 
-Crie uma pasta para os arquivos de build e compile o projeto com CMake:
+Create a `build` folder and compile the project using CMake:
 
 ```bash
 mkdir build
@@ -34,31 +34,31 @@ cmake .. -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 cmake --build .
 ```
 
-> 💡 **Nota:** Em sistemas Windows com o Visual Studio, você pode precisar especificar a arquitetura com `-A x64`:
+> 💡 **Note:** On Windows systems using Visual Studio, you may need to specify the target architecture with `-A x64`:
 
 ```bash
 cmake .. -A x64 -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 ```
 
-Essa flag define que a compilação será feita para sistemas de 64 bits.
-Para criar o executável, dentro da pasta `build`, execute o comando:
+This flag ensures the project is built for 64-bit systems.
+
+To build the executable, run the following command inside the `build` folder:
 
 ```bash
 cmake --build .
 ```
 
-Isso irá compilar o projeto com base na configuração gerada pelo CMake.
+This will compile the project using the CMake configuration.
 
+## ▶️ How to Run
 
-## ▶️ Como executar
-
-Após a compilação, o executável estará disponível dentro da pasta `build/Debug`. Para executá-lo:
+After building, the executable will be available in the `build/Debug` folder. To run it:
 
 ```bash
 ./main.exe
 ```
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```
 SFML-IMGUI-Template/
@@ -72,19 +72,18 @@ SFML-IMGUI-Template/
 └── README.md
 ```
 
-## ⚙️ Detalhes Técnicos
+## ⚙️ Technical Details
 
-O `CMakeLists.txt` está configurado para:
+The `CMakeLists.txt` is configured to:
 
-- Desabilitar os módulos `audio` e `network` da SFML para reduzir dependências.
-- Ativar a demo padrão do ImGui com `IMGUI_SFML_IMGUI_DEMO`.
-- Usar `FetchContent` para baixar e construir as bibliotecas automaticamente.
+- Disable the `audio` and `network` modules from SFML to reduce dependencies.
+- Enable the default ImGui demo with `IMGUI_SFML_IMGUI_DEMO`.
+- Use `FetchContent` to automatically download and build the required libraries.
 
-## 🧪 Testado com
+## 🧪 Tested With
 
 - GCC 13 / Clang 16
 - CMake 3.28
 - SFML 3.0.0
 - ImGui 1.91.9b
 - ImGui-SFML v3.0
-
